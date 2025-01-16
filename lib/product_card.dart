@@ -22,7 +22,10 @@ class ProductCard extends StatelessWidget {
             style: Theme.of(context).textTheme.titleMedium,
           ),
           const SizedBox(height: 5),
-          Text('\$$price'),
+          Text(
+            '\$$price',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
           const SizedBox(height: 5),
           Image.asset(
             image,

@@ -28,6 +28,11 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           'size': selectedSize,
         },
       );
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Product added to cart'),
+        ),
+      );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(

@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
         children: pages,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 35,
         onTap: (value) {
           setState(() {
             currentPage = value;

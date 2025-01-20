@@ -14,7 +14,30 @@ class CartPage extends StatelessWidget {
       ),
       body: ListView.builder(
         itemCount: cart.length,
-        itemBuilder: (context, index) {},
+        itemBuilder: (context, index) {
+          final cartItem = cart[index];
+
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(cartItem['imageUrl'] as String),
+              radius: 30,
+            ),
+            trailing: IconButton(
+              icon: Icon(
+                Icons.delete,
+                color: Colors.red,
+              ),
+              onPressed: () {},
+            ),
+            title: Text(
+              cartItem['title'].toString(),
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+            subtitle: Text(
+              'Size: ${cartItem['size']}',
+            ),
+          );
+        },
       ),
     );
   }

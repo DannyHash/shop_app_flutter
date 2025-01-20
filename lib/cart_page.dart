@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app_flutter/global_variables.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -6,8 +7,14 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Cart Page'),
+      appBar: AppBar(
+        title: Center(
+          child: Text('Cart'),
+        ),
+      ),
+      body: ListView.builder(
+        itemCount: cart.length,
+        itemBuilder: (context, index) {},
       ),
     );
   }

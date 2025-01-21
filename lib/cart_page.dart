@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app_flutter/cart_provider.dart';
-import 'package:shop_app_flutter/global_variables.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print(Provider.of<CartProvider>(context).cart);
+    final cart = Provider.of<CartProvider>(context).cart;
+
     return Scaffold(
       appBar: AppBar(
         title: Center(
@@ -30,7 +30,19 @@ class CartPage extends StatelessWidget {
                 Icons.delete,
                 color: Colors.red,
               ),
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text(
+                        'Remove Item',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    );
+                  },
+                );
+              },
             ),
             title: Text(
               cartItem['title'].toString(),

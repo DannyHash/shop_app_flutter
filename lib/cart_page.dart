@@ -39,6 +39,31 @@ class CartPage extends StatelessWidget {
                         'Remove Item',
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
+                      content: Text(
+                        'Do you want to remove the item from the cart?',
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'No',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Yes',
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
                     );
                   },
                 );

@@ -103,11 +103,11 @@ class _ProductListState extends State<ProductList> {
             ),
           ),
           Expanded(
-            child: size.width > 650
+            child: size.width > 1080
                 ? GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 2,
+                      childAspectRatio: 1.75,
                     ),
                     itemCount: products.length,
                     itemBuilder: (context, index) {
